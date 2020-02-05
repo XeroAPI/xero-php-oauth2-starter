@@ -51,7 +51,7 @@ $provider = new \League\OAuth2\Client\Provider\GenericProvider([
 
 ```
 ## Take it for a spin
-Launch your browser and navigate to http://localhost:8888/xero-php-oauth2-app/ (or whatever the correct path is). 
+Launch your browser and navigate to http://localhost:8888/xero-php-oauth2-starter/ (or whatever the correct path is). 
 
 - You should see a connect to xero link.
 - Click the link, login to Xero (if you aren't already)
