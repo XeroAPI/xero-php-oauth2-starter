@@ -14,7 +14,7 @@
     $provider = new \League\OAuth2\Client\Provider\GenericProvider([
       'clientId'                => '__YOUR_CLIENT_ID__',
       'clientSecret'            => '__YOUR_CLIENT_SECRET__',
-      'redirectUri'             => 'http://localhost:8888/pathToApp/callback.php',
+      'redirectUri'             => 'http://localhost:8888/xero-php-oauth2-starter/callback.php',
       'urlAuthorize'            => 'https://login.xero.com/identity/connect/authorize',
       'urlAccessToken'          => 'https://identity.xero.com/connect/token',
       'urlResourceOwnerDetails' => 'https://api.xero.com/api.xro/2.0/Organisation'
@@ -55,16 +55,22 @@
                 ->setEmailAddress("john.smith@24locks.com")
                 ->setIncludeInEmails(true);
 
-            $persons = [];
-            array_push($persons, $person);
+            $arr_persons = [];
+            array_push($arr_persons, $person);
 
             $contact = new XeroAPI\XeroPHP\Models\Accounting\Contact;
             $contact->setName('FooBar')
                 ->setFirstName("Foo")
                 ->setLastName("Bar")
                 ->setEmailAddress("ben.bowden@24locks.com")
-                ->setContactPersons($persons);
-            $apiResponse = $apiInstance->createContact($xeroTenantId,$contact);
+                ->setContactPersons($arr_persons);
+            
+            $arr_contacts = [];
+            array_push($arr_contacts, $contact);
+            $contacts = new XeroAPI\XeroPHP\Models\Accounting\Contacts;
+            $contacts->setContacts($arr_contacts);
+
+            $apiResponse = $apiInstance->createContacts($xeroTenantId,$contacts);
             $message = 'New Contact Name: ' . $apiResponse->getContacts()[0]->getName();
         } catch (\XeroAPI\XeroPHP\ApiException $e) {
             $error = AccountingObjectSerializer::deserialize(
