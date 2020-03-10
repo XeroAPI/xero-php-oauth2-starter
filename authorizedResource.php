@@ -34,12 +34,11 @@
   }
 
   $config = XeroAPI\XeroPHP\Configuration::getDefaultConfiguration()->setAccessToken( (string)$storage->getSession()['token'] );
-  $config->setHost("https://api.xero.com/api.xro/2.0");
-
   $apiInstance = new XeroAPI\XeroPHP\Api\AccountingApi(
       new GuzzleHttp\Client(),
       $config
   );
+  
   $message = "no API calls";
   if (isset($_GET['action'])) {
     if ($_GET["action"] == 1) {

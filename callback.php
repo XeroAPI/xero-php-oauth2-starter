@@ -34,8 +34,6 @@
       ]);
 
       $config = XeroAPI\XeroPHP\Configuration::getDefaultConfiguration()->setAccessToken( (string)$accessToken->getToken() );
-
-      $config->setHost("https://api.xero.com");
       $identityInstance = new XeroAPI\XeroPHP\Api\IdentityApi(
         new GuzzleHttp\Client(),
         $config

@@ -21,7 +21,7 @@
   // Scope defines the data your app has permission to access.
   // Learn more about scopes at https://developer.xero.com/documentation/oauth2/scopes
   $options = [
-      'scope' => ['openid email profile offline_access accounting.settings accounting.transactions accounting.contacts accounting.journals.read accounting.reports.read accounting.attachments']
+      'scope' => ['openid email profile offline_access assets projects accounting.settings accounting.transactions accounting.contacts accounting.journals.read accounting.reports.read accounting.attachments']
   ];
 
   // This returns the authorizeUrl with necessary parameters applied (e.g. state).
