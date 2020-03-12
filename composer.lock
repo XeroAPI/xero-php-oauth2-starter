@@ -4,28 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b2a598f7315d2d7401142d2d710c8cde",
-    "content-hash": "7ba864de4dce78130a4b6efc2bfb6f29",
+    "hash": "2a5eb6063a72445faf603e407a2ce588",
+    "content-hash": "c49341cf2a6c705f9cacca9d5a3ed2a7",
     "packages": [
         {
             "name": "firebase/php-jwt",
-            "version": "v5.0.0",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e"
+                "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
-                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/4566062c68f76f43d44f1643f4970fe89757d4c6",
+                "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": " 4.8.35"
+                "phpunit/phpunit": "^4.8|^5"
             },
             "type": "library",
             "autoload": {
@@ -51,7 +51,7 @@
             ],
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2017-06-27 22:17:23"
+            "time": "2020-02-24 23:15:03"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -484,16 +484,16 @@
         },
         {
             "name": "xeroapi/xero-php-oauth2",
-            "version": "1.1.3",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/XeroAPI/xero-php-oauth2.git",
-                "reference": "c80dee255cfcb735689fe31f391b427d4e939646"
+                "reference": "58451ba80d1a09ce8120d02766508713fa1da45b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/XeroAPI/xero-php-oauth2/zipball/c80dee255cfcb735689fe31f391b427d4e939646",
-                "reference": "c80dee255cfcb735689fe31f391b427d4e939646",
+                "url": "https://api.github.com/repos/XeroAPI/xero-php-oauth2/zipball/58451ba80d1a09ce8120d02766508713fa1da45b",
+                "reference": "58451ba80d1a09ce8120d02766508713fa1da45b",
                 "shasum": ""
             },
             "require": {
@@ -536,7 +536,7 @@
                 "sdk",
                 "xero"
             ],
-            "time": "2020-02-05 19:27:50"
+            "time": "2020-03-10 20:17:46"
         }
     ],
     "packages-dev": [],
