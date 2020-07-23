@@ -137,6 +137,25 @@
             );
             $message = "ApiException - " . $error->getElements()[0]["validation_errors"][0]["message"];
         }
+    } else if ($_GET["action"] == 5) {
+
+        $if_modified_since = new \DateTime("2019-01-02T19:20:30+01:00"); // \DateTime | Only records created or modified since this timestamp will be returned
+        $where = null;
+        $order = null; // string
+        $ids = null; // string[] | Filter by a comma-separated list of Invoice Ids.
+        $page = 1; // int | e.g. page=1 – Up to 100 invoices will be returned in a single API call with line items
+        $include_archived = null; // bool | e.g. includeArchived=true - Contacts with a status of ARCHIVED will be included
+   
+        try {
+            $apiResponse = $apiInstance->getContacts($xeroTenantId, $if_modified_since, $where, $order, $ids, $page, $include_archived);
+            if (  count($apiResponse->getContacts()) > 0 ) {
+                $message = 'Total contacts found: ' . count($apiResponse->getContacts());
+            } else {
+                $message = "No contacts found matching filter criteria";
+            }
+        } catch (Exception $e) {
+            echo 'Exception when calling AccountingApi->getContacts: ', $e->getMessage(), PHP_EOL;
+        }
     }
   }
 ?>
@@ -147,6 +166,7 @@
             <li><a href="authorizedResource.php?action=2">Create one Contact</a></li>
             <li><a href="authorizedResource.php?action=3">Get Invoice with Filters</a></li>
             <li><a href="authorizedResource.php?action=4">Create multiple contacts and summarizeErrors</a></li>
+            <li><a href="authorizedResource.php?action=5">Get Contact with Filters</a></li>
         </ul>
         <div>
         <?php
