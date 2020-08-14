@@ -156,6 +156,26 @@
         } catch (Exception $e) {
             echo 'Exception when calling AccountingApi->getContacts: ', $e->getMessage(), PHP_EOL;
         }
+    } else if ($_GET["action"] == 6) {
+
+        $jwt = new XeroAPI\XeroPHP\JWTClaims();
+        $jwt->setTokenId((string)$storage->getIdToken() );
+        // Set access token in order to get authentication event id
+        $jwt->setTokenAccess( (string)$storage->getAccessToken() );
+        $jwt->decode();
+
+        echo("sub:" . $jwt->getSub() . "<br>");
+        echo("sid:" . $jwt->getSid() . "<br>");
+        echo("iss:" . $jwt->getIss() . "<br>");
+        echo("exp:" . $jwt->getExp() . "<br>");
+        echo("given name:" . $jwt->getGivenName() . "<br>");
+        echo("family name:" . $jwt->getFamilyName() . "<br>");
+        echo("email:" . $jwt->getEmail() . "<br>");
+        echo("user id:" . $jwt->getXeroUserId() . "<br>");
+        echo("username:" . $jwt->getPreferredUsername() . "<br>");
+        echo("session id:" . $jwt->getGlobalSessionId() . "<br>");
+        echo("authentication_event_id:" . $jwt->getAuthenticationEventId() . "<br>");
+
     }
   }
 ?>
@@ -167,6 +187,7 @@
             <li><a href="authorizedResource.php?action=3">Get Invoice with Filters</a></li>
             <li><a href="authorizedResource.php?action=4">Create multiple contacts and summarizeErrors</a></li>
             <li><a href="authorizedResource.php?action=5">Get Contact with Filters</a></li>
+            <li><a href="authorizedResource.php?action=6">Get JWT Claims</a></li>
         </ul>
         <div>
         <?php
