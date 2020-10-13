@@ -11,7 +11,7 @@ To run locally, you'll need a local web server with PHP support.
 ### Download this code
 * Clone this repo into your local server webroot. i.e. `htdocs`
 * Launch a terminal app and change to the newly cloned folder `xero-php-oauth2-app`
-* Download dependencies with Composer using the folloing comman
+* Download dependencies with Composer using the following command:
 
 ```
 composer install
