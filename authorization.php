@@ -7,8 +7,6 @@
   // you'll need to extend to your Database for a scalable solution
   $storage = new StorageClass();
 
-  //session_start();
-
   $provider = new \League\OAuth2\Client\Provider\GenericProvider([
     'clientId'                => '__YOUR_CLIENT_ID__',
     'clientSecret'            => '__YOUR_CLIENT_SECRET__',
