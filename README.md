@@ -33,7 +33,7 @@ To obtain your API keys, follow these steps and create a Xero app
 ## Configure API keys
 You'll need to update your code where ever there is a clientId, clientSecret or redirectUri
 
-- authoirzation.php
+- authorization.php
 - callback.php
 - authorizedResource.php
 
