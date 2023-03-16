@@ -10,7 +10,7 @@ To run locally, you'll need a local web server with PHP support.
 
 ### Download this code
 * Clone this repo into your local server webroot. i.e. `htdocs`
-* Launch a terminal app and change to the newly cloned folder `xero-php-oauth2-app`
+* Launch a terminal app and change to the newly cloned folder `xero-php-oauth2-starter`
 * Download dependencies with Composer using the following command:
 
 ```
@@ -24,7 +24,7 @@ To obtain your API keys, follow these steps and create a Xero app
 * Login to [Xero developer center](https://developer.xero.com/myapps)
 * Click "New App" link
 * Enter your App name, company url, privacy policy url.
-* Enter the redirect URI (your callback url - i.e. `http://localhost:8888/xero-php-oauth2-app/callback.php`)
+* Enter the redirect URI (your callback url - i.e. `http://localhost:8888/xero-php-oauth2-starter/callback.php`)
 * Agree to terms and condition and click "Create App".
 * Click "Generate a secret" button.
 * Copy your client id and client secret and save for use later.
